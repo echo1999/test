@@ -205,7 +205,7 @@ h4.smaller {
 }
 
 h4.bigger {
-	font-size: 19px
+    font-size: 15px;
 }
 
 h4.block {
@@ -512,7 +512,8 @@ pre.prettyprint {
 }
 
 .red {
-	color: #dd5a43!important
+    color: #dd5a43!important;
+    font-size: 30px;
 }
 
 .red2 {
@@ -568,7 +569,8 @@ pre.prettyprint {
 }
 
 .grey {
-	color: #777!important
+    color: #777!important;
+    font-size: 30px;
 }
 
 .light-grey {
@@ -1284,8 +1286,9 @@ pre.prettyprint {
 	border-bottom: 1px solid #CCC
 }
 
-.header.blue {
-	border-bottom-color: #d5e3ef
+.blue {
+    color: #478fca!important;
+    font-size: 20px;
 }
 
 .header.green {

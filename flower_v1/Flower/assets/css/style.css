@@ -14605,3 +14605,13 @@ justify-content: space-between;*/
   fill: currentColor; 
   overflow: hidden; 
 } 
+
+/* echo  */
+.icon-personal {
+  width: 22px;
+  overflow: hidden;
+}
+
+img:hover {
+  cursor: pointer;
+}
