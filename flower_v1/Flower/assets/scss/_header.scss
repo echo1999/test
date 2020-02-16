@@ -1,9 +1,9 @@
 /*--
     02. Header Css
 -----------------------*/
-.header-top-area {
-    
-}
+
+.header-top-area {}
+
 .transparent-header {
     background-color: transparent;
     position: absolute;
@@ -14,9 +14,11 @@
     width: 100%;
     border-bottom: 1px solid #ddd;
 }
+
 .header-top-inner {
     border-bottom: 1px solid #ddd;
 }
+
 .top-info {
     padding: 10px 0;
     & li {
@@ -24,7 +26,7 @@
         margin-right: 15px;
         padding-right: 15px;
         position: relative;
-        @media #{$tablet-device}{
+        @media #{$tablet-device} {
             margin-right: 12px;
             padding-right: 12px;
         }
@@ -38,16 +40,14 @@
             top: 50%;
             transform: translate(0%, -50%) rotate(20deg);
         }
-        &:last-child  {
+        &:last-child {
             margin-right: 0px;
             padding-right: 0px;
-            &::after{ 
+            &::after {
                 display: none;
             }
         }
-        & a {
-            
-        }
+        & a {}
     }
 }
 
@@ -64,29 +64,32 @@
     }
 }
 
+
 /*--
     - Header Bottom Css
 -------------------------------*/
+
 .logo {
     margin: 40px 0;
-    @media #{$tablet-device }{
+    @media #{$tablet-device } {
         margin: 26px 0;
     }
-    @media #{$small-mobile}{
+    @media #{$small-mobile} {
         width: 125px;
         margin: 25px 0;
     }
-    @media #{$large-mobile}{
+    @media #{$large-mobile} {
         margin: 25px 0;
     }
 }
+
 .main-menu-area {
     & ul {
-        & > li {
+        &>li {
             display: inline-block;
             position: relative;
-            padding:0 20px;
-            & > a {
+            padding: 0 20px;
+            &>a {
                 display: block;
                 font-size: 14px;
                 font-weight: 500;
@@ -109,32 +112,34 @@
             &:first-child {
                 padding-left: 0;
             }
-            &:hover{
-                & > a {
-                    &::before{
-                       visibility: visible;
-                       @include opacity(1);
-                       width: 100%;
+            &:hover {
+                &>a {
+                    &::before {
+                        visibility: visible;
+                        @include opacity(1);
+                        width: 100%;
                     }
                 }
             }
-            
             &:hover {
-                .sub-menu, .mega-menu {
+                .sub-menu,
+                .mega-menu {
                     visibility: visible;
                     @include opacity(1);
                     top: 100%;
                 }
             }
-            
         }
     }
 }
+
+
 /*--
     - Main Menu Css
 ---------------------*/
-.main-menu-area{
-   .sub-menu {
+
+.main-menu-area {
+    .sub-menu {
         background: $white;
         left: 0;
         padding: 15px;
@@ -143,29 +148,28 @@
         width: 180px;
         z-index: 99;
         top: 120%;
-        visibility: hidden;    
+        visibility: hidden;
         @include opacity(0);
         @include transition(.3s);
-
-        & > li {
+        &>li {
             padding: 0;
             display: block;
             &:first-child {
                 margin-bottom: 0;
             }
-
-            & > a {
+            &>a {
                 padding: 0;
                 font-weight: 400;
                 margin-bottom: 8px;
                 text-transform: capitalize;
-                &::before{
-                   display: none;
+                &::before {
+                    display: none;
                 }
             }
         }
-    } 
+    }
 }
+
 // mega-menu css
 .main-menu-area {
     .mega-menu {
@@ -181,17 +185,16 @@
         @include opacity(0);
         @include transition(.3s);
         box-shadow: 0, 0, 0, 0.1 rgba(0, 0, 0, 0.1);
-        & >li {
+        &>li {
             width: 33.333%;
             float: left;
             padding: 0;
-
-            & > a {
+            &>a {
                 padding: 0;
                 margin-bottom: 20px;
                 padding-bottom: 5px;
                 &::before {
-                   display: none;
+                    display: none;
                 }
                 &::after {
                     content: "";
@@ -214,8 +217,8 @@
                         display: block;
                         font-weight: 400;
                         margin-top: 8px;
-                        &::before{
-                           display: none;
+                        &::before {
+                            display: none;
                         }
                     }
                 }
@@ -223,30 +226,33 @@
         }
     }
 }
+
 // sidebar-search
 .trigger-search {
-  display: inline-block;
+    display: inline-block;
 }
+
 .main-search-active {
-	background: rgba(0, 0, 0, 0.92) none repeat scroll 0 0;
-	width: 100%;
-	min-height: 100vh;
-	padding: 32px 46px 39px;
-	position: fixed;
-	top: 0;
-	right: 0;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
+    background: rgba(0, 0, 0, 0.92) none repeat scroll 0 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 32px 46px 39px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     visibility: hidden;
     opacity: 0;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	z-index: 9999;
-	-webkit-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 9999;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
+
 .sidebar-search-icon {
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border: 0 none;
@@ -259,6 +265,7 @@
     right: 20px;
     top: 20px;
 }
+
 .sidebar-search-icon {
     & button {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
@@ -269,17 +276,18 @@
         line-height: 1;
         transition: all 0.3s ease 0s;
         &:hover {
-          color: $theme-color;
+            color: $theme-color;
         }
     }
 }
+
 .sidebar-search-input {
     -ms-flex-item-align: center;
-	    align-self: center;
-	display: -webkit-box;
-	display: -ms-flexbox;
+    align-self: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
     @include flex (flex);
-    & .form-search{
+    & .form-search {
         position: relative;
         & input {
             background-color: rgba(0, 0, 0, 0);
@@ -293,7 +301,7 @@
             line-height: 70px;
             padding: 15px 50px 15px 0;
             width: 800px;
-            &::placeholder{
+            &::placeholder {
                 color: #fff;
             }
             &::-webkit-input-placeholder {
@@ -305,18 +313,18 @@
             &::-ms-input-placeholder {
                 color: #fff;
             }
-            &::placeholder{
+            &::placeholder {
                 color: #fff;
             }
-            @media #{$tablet-device}{
+            @media #{$tablet-device} {
                 width: 500px;
-            } 
-            @media #{$large-mobile}{
+            }
+            @media #{$large-mobile} {
                 width: 400px;
-            } 
-            @media #{$small-mobile}{
+            }
+            @media #{$small-mobile} {
                 width: 280px;
-            } 
+            }
         }
         & button {
             background-color: rgba(0, 0, 0, 0);
@@ -331,47 +339,55 @@
             transition: all 0.3s ease 0s;
             width: 40px;
             &:hover {
-              color: $theme-color;
+                color: $theme-color;
             }
         }
     }
 }
+
 .main-search-active.inside {
-  visibility: visible;
-  opacity: 1;
-  z-index: 99999;
+    visibility: visible;
+    opacity: 1;
+    z-index: 99999;
 }
+
+
 /*--
     - Right Blok Box Css
 ---------------------------*/
+
 .right-blok-box {
     justify-content: flex-end;
     margin: 0px 0;
-    @media #{$tablet-device }{
+    @media #{$tablet-device } {
         margin: 34px 50px 24px 0;
     }
-    @media #{$large-mobile}{
+    @media #{$large-mobile} {
         margin: 34px 0px 24px 0;
     }
-    @media #{$small-mobile}{
+    @media #{$small-mobile} {
         margin: 28px 4px 24px 0;
     }
     a {
         font-size: 24px;
-        @media #{$small-mobile}{
+        @media #{$small-mobile} {
             font-size: 20px;
         }
     }
 }
+
 .user-wrap {
     padding: 0 20px;
-    @media #{$small-mobile}{
+    @media #{$small-mobile} {
         padding: 0 15px;
     }
 }
+
+
 /*-- 
     - Shopping Cart Css
 ----------------------------*/
+
 .shopping-cart-wrap {
     position: relative;
     & ul.mini-cart {
@@ -395,60 +411,61 @@
                 display: block;
                 width: 100px;
             }
-            .cart-title{
-               padding-left: 15px;
-               width: 60%;
-                & h4{
+            .cart-title {
+                padding-left: 15px;
+                width: 60%;
+                & h4 {
                     font-size: 15px;
                     font-weight: 500;
                 }
                 & .quantity {
                     display: block;
                 }
-                & .price-box{
+                & .price-box {
                     color: $theme-color;
                     font-weight: 500;
-                    .old-price{
+                    .old-price {
                         color: #666;
                         text-decoration: line-through;
                     }
                 }
-                & .remove_from_cart{
+                & .remove_from_cart {
                     margin-top: 10px;
                     position: absolute;
                     right: 0;
                     font-size: 14px;
                 }
             }
-        } 
+        }
         & .subtotal-titles {
-            & .subtotal-titles{
+            & .subtotal-titles {
                 display: flex;
                 justify-content: space-between;
                 font-size: 14px;
                 font-weight: 600;
                 color: $black;
-                h3{
+                h3 {
                     font-size: 14px;
                     font-weight: 600;
-                    color: $black; 
+                    color: $black;
                     line-height: 20px;
                     margin: 0;
                 }
             }
         }
-        @media #{$large-mobile}{
+        @media #{$large-mobile} {
             right: -30px;
             width: 280px;
         }
     }
-    &:hover ul.mini-cart{
+    &:hover ul.mini-cart {
         visibility: visible;
         @include opacity(1);
         top: 100%;
     }
 }
-#cart-total { 
+
+#cart-total {
     background: $theme-color;
     border-radius: 100%;
     color: $white;
@@ -464,6 +481,7 @@
     width: 18px;
     right: 8px;
 }
+
 .mini-cart-btns {
     & .cart-btns {
         display: flex;
@@ -495,6 +513,7 @@
 /*---------------------------
     - Mobile menu css
 -----------------------------*/
+
 .mobile-header .category-toggle {
     padding: 8px 15px;
 }
@@ -579,7 +598,8 @@ only screen and (max-width: 767.98px) {
 .mobile-main-header .mobile-menu-toggler .mobile-menu-btn {
     margin-left: 15px;
 }
- .mobile-menu-btn .off-canvas-btn {
+
+.mobile-menu-btn .off-canvas-btn {
     font-size: 23px;
     cursor: pointer;
     padding: 0px 10px;
@@ -693,9 +713,12 @@ only screen and (max-width: 767.98px) {
     transform: rotate(0);
 }
 
+
 /*----- mobile menu end -----*/
 
+
 /* ----scroll to top css ----*/
+
 .scroll-top {
     bottom: 50px;
     cursor: pointer;
@@ -741,7 +764,6 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
         -ms-flex-preferred-size: 28%;
         flex-basis: 28%;
     }
-
     .custom-row .col-xl-3:first-child {
         display: none;
     }
@@ -796,7 +818,6 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
         -ms-flex-preferred-size: 28%;
         flex-basis: 28%;
     }
-
     .custom-row-2 .col-xl-3:first-child {
         display: none;
     }
@@ -836,7 +857,9 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     }
 }
 
+
 /*----------- header top area start -----------*/
+
 .header-top-settings ul li {
     color: #fff;
     cursor: pointer;
@@ -973,7 +996,9 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     display: none;
 }
 
+
 /*------- header middile area start -------*/
+
 .header-middle-area {
     padding: 40px 0;
 }
@@ -1036,7 +1061,9 @@ only screen and (min-width: 768px) and (max-width: 991.98px) {
     transform: translateY(-50%);
 }
 
+
 /*---------- header mini cart start ----------*/
+
 .header-configure-wrapper {
     padding-right: 5px;
     display: -webkit-box;
@@ -1327,7 +1354,7 @@ ul.minicart-pricing-box li span strong {
 }
 
 ul.minicart-pricing-box li.total span {
-    font-size: 16px;
+    font-size: 1px;
     font-weight: 500;
 }
 
@@ -1362,8 +1389,12 @@ ul.minicart-pricing-box li:last-child {
     margin-bottom: 0;
 }
 
+
 /*----------- header settinngs area end -----------*/
+
+
 /*---------- main menu style start ---------*/
+
 .main-menu ul {
     display: -webkit-box;
     display: -webkit-flex;
@@ -1529,8 +1560,12 @@ ul.minicart-pricing-box li:last-child {
     background-color: transparent;
 }
 
+
 /*---------- main menu style end ---------*/
+
+
 /*------ sticky menu style start ------*/
+
 .sticky.is-sticky {
     top: 0;
     position: fixed;
@@ -1557,8 +1592,12 @@ only screen and (max-width: 767.98px) {
     }
 }
 
+
 /*------ sticky menu style end ------*/
+
+
 /*----- mobile menu start -----*/
+
 .mobile-header .category-toggle {
     padding: 8px 15px;
 }
@@ -1758,7 +1797,9 @@ only screen and (max-width: 767.98px) {
     transform: rotate(0);
 }
 
+
 /*------ offcanvas widget area start ------*/
+
 .offcanvas-widget-area {
     margin-top: auto;
     padding-bottom: 0px;
@@ -1803,7 +1844,9 @@ only screen and (max-width: 767.98px) {
     color: $theme-color;
 }
 
+
 /*------ offcanvas widget area end ------*/
+
 .off-canvas-wrapper {
     position: fixed;
     top: 0;
@@ -1919,6 +1962,7 @@ only screen and (max-width: 767.98px) {
 
 
 /*------- mobile top bar settings end -------*/
+
 .category-dropdown-wrapper {
     height: 100%;
     -webkit-box-shadow: -1px 0px 3px 0px #cccccc;
@@ -2367,5 +2411,3 @@ only screen and (max-width: 767.98px) {
 .category-toggle-wrap nav.category-menu>ul>li .category-mega-menu>li>ul li:last-child a {
     border-bottom: 0;
 }
-
-
