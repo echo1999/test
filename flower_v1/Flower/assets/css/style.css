@@ -16533,7 +16533,10 @@ img:hover {
     overflow: hidden;
 }
 
-.showPic {
+#showPic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 4;
     width: 80%;
     height: 60%;
@@ -16607,7 +16610,7 @@ img:hover {
     z-index: 999;
 }
 
-.left_btn_upload {
+#left_btn_upload {
     FONT-WEIGHT: 100;
     margin-top: 10px;
     display: inline-block;
@@ -16923,4 +16926,11 @@ ul {
     top: 150px;
     color: rgb(150, 150, 150);
     text-align: center;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    width: auto;
+    height: 100%;
 }
