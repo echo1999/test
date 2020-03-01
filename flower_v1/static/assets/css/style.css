@@ -16619,7 +16619,27 @@ img:hover {
     vertical-align: middle;
     align-content: center;
     height: 40px;
-    width: 100%;
+    width: 47%;
+    /* border: 1px solid grey; */
+    border-radius: 10px;
+    background: radial-gradient(grey, transparent);
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-family: auto;
+}
+
+#left_btn_restart {
+    FONT-WEIGHT: 100;
+    margin-top: 10px;
+    margin-left: 20px;
+    display: inline-block;
+    text-align: center;
+    /* line-height: 2; */
+    vertical-align: middle;
+    align-content: center;
+    height: 40px;
+    width: 47%;
     /* border: 1px solid grey; */
     border-radius: 10px;
     background: radial-gradient(grey, transparent);

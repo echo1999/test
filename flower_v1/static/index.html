@@ -405,7 +405,8 @@
                         </div>
                         <div id="btns">
 
-                            <input id="left_btn_upload" type="file">上传图片</input>
+                            <input id="left_btn_upload" type="file"></input>
+                            <button id="left_btn_restart">清空</button>
                             <button class="left_btn_start">开始识别</button>
                         </div>
 
@@ -1170,6 +1171,64 @@
         }
 
         window.addEventListener("DOMContentLoaded", contentLoaded, false);
+    </script>
+
+    <script type="text/javascript">
+        function ProcessFile(e) {
+            var file = document.getElementById('left_btn_upload').files[0];
+            if (file) {
+                var reader = new FileReader();
+                reader.onload = function(event) {
+                    var txt = event.target.result;
+
+                    var img = document.createElement("img");
+                    img.src = txt; //将图片base64字符串赋值给img的src
+                    // console.log(txt);
+                    document.getElementById("showPic").appendChild(img);
+                };
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function contentLoaded() {
+            document.getElementById('left_btn_upload').addEventListener('change', ProcessFile, false);
+        }
+
+        window.addEventListener("DOMContentLoaded", contentLoaded, false);
+    </script>
+    <!-- 清空上传的图片 -->
+    <script type="text/javascript">
+        Sea('#left_btn_restart').on('click', function() {
+            Sea.Ajax({
+                url: '/show.restart',
+                data: {}
+            }).then(res => {
+                if (res == "ok") {
+                    document.getElementById('showPic').innerHTML = "";
+                    console.log('文件夹清空成功')
+                }
+            })
+
+        })
+    </script>
+    <!-- 上传图片 -->
+    <script>
+        Sea('#left_btn_restart').on('click', function() {
+            const file = document.getElementById('left_btn_upload').files[0];
+            Sea.Ajax({
+                method: 'post',
+                url: '/pic.upload',
+            }).then(res => {
+                if (res.uptoken) {
+                    let cancel = Sea.upload(qiniu, file, res.uptoken, (name, event) => {
+                            log(name, event)
+                        })
+                        // setTimeout(() => {
+                        //   cancel.unsubscribe() // 上传取消
+                        // }, 5000)
+                }
+            })
+        })
     </script>
 </body>
 
